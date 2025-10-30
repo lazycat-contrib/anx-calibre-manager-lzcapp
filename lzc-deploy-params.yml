@@ -1,0 +1,20 @@
+params:
+  - id: calibre_username
+    type: string
+    name: "calibre username"
+    description: "the calibre username to  set for login"
+
+  - id: calibre_password
+    type: string
+    name: "calibre password"
+    description: "the calibre password you want to set for login"
+
+locales:
+  zh:
+    calibre_username:
+      name: "calibre用户名"
+      description: "您要设置登录的calibre用户名"
+
+    calibre_password:
+      name: "calibre密码"
+      description: "您要设置登录的calibre密码"
