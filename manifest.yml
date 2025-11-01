@@ -53,6 +53,11 @@ services:
       - PUID=1000
       - PGID=1000
 
+unsupported_platforms:
+  - ios
+  - tvos
+  - android
+
 locales:
   zh:
     name: "Anx Calibre Manager"
