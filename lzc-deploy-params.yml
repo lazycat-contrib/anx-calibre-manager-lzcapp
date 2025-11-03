@@ -2,7 +2,7 @@ params:
   - id: calibre_username
     type: string
     name: "calibre username"
-    description: "the calibre username to  set for login"
+    description: "the calibre username to  set for login(DONOT USE EMAIL AND SPECIAL CHARACRORS)"
 
   - id: calibre_password
     type: string
@@ -13,7 +13,7 @@ locales:
   zh:
     calibre_username:
       name: "calibre用户名"
-      description: "您要设置登录的calibre用户名"
+      description: "您要设置登录的calibre用户名(不要使用邮箱和特殊字符)"
 
     calibre_password:
       name: "calibre密码"
