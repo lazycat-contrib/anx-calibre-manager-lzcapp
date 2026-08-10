@@ -3,23 +3,20 @@ application:
   background_task: true
   public_path:
     - /
-
   upstreams:
     - location: /
       backend: http://anx-calibre-manager-aio:5000/
-
     - location: /
       domain_prefix: calibre
       backend: http://anx-calibre-manager-aio:8080/
-
     - location: /
       domain_prefix: cwa
       backend: http://calibre-web-automated:8083/
-
 services:
   anx-calibre-manager-aio:
     # ghcr.io/ptbsare/anx-calibre-manager:aio-1.13.6
-    image: registry.lazycat.cloud/czyt/ptbsare/anx-calibre-manager:ec67ffdb3277dddf
+    # upstream: ghcr.io/ptbsare/anx-calibre-manager:aio-1.38.9
+    image: registry.lazycat.cloud/czyt/ptbsare/anx-calibre-manager:4620e9f6d9ad70e9
     binds:
       - /lzcapp/var/config:/config
       - /lzcapp/var/webdav:/webdav
@@ -28,10 +25,10 @@ services:
       - CALIBRE_URL=https://calibre-{{.S.AppDomain}}
       - CALIBRE_USERNAME={{.U.calibre_username}}
       - CALIBRE_PASSWORD={{.U.calibre_password}}
-
   calibre-web-automated:
     # ghcr.io/crocodilestick/calibre-web-automated:latest
-    image: registry.lazycat.cloud/czyt/crocodilestick/calibre-web-automated:cd0bd06d4b15ffec
+    # upstream: ghcr.io/crocodilestick/calibre-web-automated:v4.0.6
+    image: registry.lazycat.cloud/czyt/crocodilestick/calibre-web-automated:52a658a4c7b8ff49
     binds:
       - /lzcapp/var/library:/calibre-library
       - /lzcapp/var/cwa-config:/config
