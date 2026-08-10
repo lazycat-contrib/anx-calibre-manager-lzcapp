@@ -3,11 +3,15 @@ params:
     type: string
     name: "calibre username"
     description: "the calibre username to  set for login(DONOT USE EMAIL AND SPECIAL CHARACRORS)"
+    default_value: "admin"
+    optional: false
 
   - id: calibre_password
-    type: string
+    type: secret
     name: "calibre password"
     description: "the calibre password you want to set for login"
+    default_value: "$random(len=20)"
+    optional: false
 
 locales:
   zh:
