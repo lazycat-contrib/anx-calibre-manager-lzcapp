@@ -27,8 +27,8 @@ services:
       - CALIBRE_PASSWORD={{.U.calibre_password}}
   calibre-web-automated:
     # ghcr.io/crocodilestick/calibre-web-automated:latest
-    # upstream: ghcr.io/crocodilestick/calibre-web-automated:v4.0.7
-    image: registry.lazycat.cloud/czyt/crocodilestick/calibre-web-automated:d58bb0abafd66fa0
+    # upstream: ghcr.io/crocodilestick/calibre-web-automated:v4.0.8
+    image: registry.lazycat.cloud/czyt/crocodilestick/calibre-web-automated:3ecaab608774cd52
     binds:
       - /lzcapp/var/library:/calibre-library
       - /lzcapp/var/cwa-config:/config
