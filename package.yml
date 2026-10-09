@@ -1,4 +1,5 @@
 package: community.lazycat.app.anx-calibre-manager
+license: GPL-3.0
 version: 1.38.9
 name: Anx Calibre Manager
 description: "一个现代化的、移动端优先的 Web 应用，用于管理您的电子书库，可与 Calibre 集成，并为您的 Anx-reader 兼容设备提供个人 WebDAV 服务器。"
